@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master_student_after.master.cs" Inherits="student_afterlogin_Master_student_after" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Virtual Classroom</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../../Styles/style.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../Scripts/jquery.dropotron-1.0.js"></script>
+<script type="text/javascript" src="../../Scripts/jquery.slidertron-1.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#menu > ul').dropotron({
+            mode: 'fade',
+            globalOffsetY: 11,
+            offsetY: -15
+        });
+        $('#slider').slidertron({
+            viewerSelector: '.viewer',
+            indicatorSelector: '.indicator span',
+            reelSelector: '.reel',
+            slidesSelector: '.slide',
+            speed: 'slow',
+            advanceDelay: 4000
+        });
+    });
+</script>
+</head>
+<body style="background-color:#d8d8d8">
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#"><u>Virtual Classroom</u></a></h1>
+		</div>
+		<div id="slogan">
+			<a  href="Sign_Out.aspx"><asp:Image ID="Image1" ImageUrl="~/images/signout.png" runat="server" /></a>
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="first">
+				<a href="Afterstudenthome.aspx"><u>Home</u></a>
+			</li>
+            <li><a href="CheckClassArranged.aspx"><u>Go-to-class</u></a></li>
+            <li><a href="ViewContent.aspx"><u>View Content</u></a></li>
+            <li>
+                <span class="opener"><u>Query</u></span>
+                <ul>
+                    <li><a href="SendMessage.aspx">Send Message</a></li>
+                    <li><a href="ViewMessage.aspx">View Messages</a></li>
+                </ul>
+            </li>
+			<li><a href="ViewTest.aspx"><u>Appear For Test</u></a></li>
+			<li>
+                <span class="opener"><u>Report</u></span>
+                <ul>
+                    <li><a href="ViewReport.aspx">Test Report</a></li>
+                    <li><a href="CourseReport.aspx" target="_blank">Course Report</a></li>
+                </ul>
+            </li>
+            <li>
+                <span class="opener"><u>Change Profile</u></span>
+                <ul>
+                    <li><a href="EditStudentProfile.aspx">Edit Student Profile</a></li>
+                    <li><a href="CheckChangeCourse.aspx">Change Course</a></li>
+                </ul>
+            </li>
+		</ul>
+        
+		<br class="clearfix" />
+	</div>
+	
+
+    
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+         </asp:ContentPlaceHolder>
+    </div>
+	
+
+    
+
+	<div id="page-bottom">
+		
+		<br class="clearfix" />
+	</div>
+
+
+
+
+</div>
+
+<div id="footer">
+	&copy; Untitled. All rights reserved.
+</div>
+</body>
+</html>
